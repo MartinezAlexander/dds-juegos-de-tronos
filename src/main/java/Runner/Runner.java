@@ -1,44 +1,13 @@
 package Runner;
-
+/*
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-import org.uqbarproject.jpa.java8.extras.PerThreadEntityManagers;
-
-import entidades.Aerea;
-import entidades.Casa;
-import entidades.Lugar;
-import entidades.Naval;
-import entidades.Terrestre;
+import org.uqbarproject.jpa.java8.extras.PerThreadEntityManagers;*/
 
 public class Runner {
 	public static void main(String[] args){
-		
-		Aerea a = new Aerea(5);
-		Terrestre t = new Terrestre(8);
-		Naval n = new Naval(2);
-		
-			
-		EntityManager em = PerThreadEntityManagers.getEntityManager();
-		
-		long id = 2;
-		Lugar l = em.find(Lugar.class,id);
-		
-		Casa c = new Casa("Lannister",45000,5,l);
-		c.agregarFuerzaMilitar(a);
-		c.agregarFuerzaMilitar(t);
-		c.agregarFuerzaMilitar(n);
-		
-		EntityTransaction trans = em.getTransaction();
-		trans.begin();
-		
-		em.persist(a);
-		em.persist(t);
-		em.persist(n);
-		em.persist(l);
-		em.persist(c);
-		
-		trans.commit();
+		// Usar entity manager aca para persistir
 	}
 	
 	/*
