@@ -7,7 +7,11 @@
   
     <persistence-unit name="db" transaction-type="RESOURCE_LOCAL">
     	<provider>org.hibernate.ejb.HibernatePersistence</provider>
-
+		
+		<class>entidades.Lugar</class>
+		<class>entidades.Ciudad</class>
+		<class>entidades.Castillo</class>
+		
         <properties> 
 	    <property name="hibernate.archive.autodetection" value="class"/>        
         

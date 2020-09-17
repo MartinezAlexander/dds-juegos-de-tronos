@@ -1,6 +1,14 @@
 package entidades;
 
-public class Lugar {
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Lugares")
+@Inheritance(strategy=InheritanceType.JOINED)
+public class Lugar extends EntidadPersistente{
 	private String nombre;
 	private int anioFundacion;
 	private int poblacion;
