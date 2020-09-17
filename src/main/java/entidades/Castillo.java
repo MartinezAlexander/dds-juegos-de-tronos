@@ -1,0 +1,21 @@
+package entidades;
+
+public class Castillo extends Lugar {
+	private int cantidadTorres;
+	private int cantidadMurallas;
+	
+	public Castillo(){}
+	
+	public Castillo(int cantidadTorres, int cantidadMurallas){
+		this.cantidadTorres = cantidadTorres;
+		this.cantidadMurallas = cantidadMurallas;
+	}
+
+	public int getCantidadTorres(){
+		return cantidadTorres;
+	}
+
+	public int getCantidadMurallas(){
+		return cantidadMurallas;
+	}
+}
