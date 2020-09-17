@@ -10,7 +10,7 @@ public class Casa {
 	private Casa vasallaDe;
 	private Lugar origen;
 	private List<FuerzaMilitar> fuerzasMilitares;
-	//private String nombreLugarOrigen;
+	private String nombreLugarOrigen;
 	
 	public Casa(){}
 	
@@ -20,7 +20,7 @@ public class Casa {
 		this.anioFundacion = anioFundacion;
 		this.vasallaDe = null;
 		this.origen = origen;
-		//this.nombreLugarOrigen = origen.getNombre();
+		this.nombreLugarOrigen = origen.getNombre();
 		this.fuerzasMilitares = new ArrayList<FuerzaMilitar>();
 	}
 	
@@ -29,8 +29,8 @@ public class Casa {
 	}
 	
 	public String nombreLugarOrigen(){
-		return origen.getNombre(); // Normalizado
-		//return this.nombreLugarOrigen; // Desnormalizacion
+		// return origen.getNombre(); // Normalizado
+		return this.nombreLugarOrigen; // Desnormalizacion
 	}
 
 	public String getNombre(){

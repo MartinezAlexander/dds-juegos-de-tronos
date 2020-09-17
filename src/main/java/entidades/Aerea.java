@@ -1,6 +1,6 @@
 package entidades;
 
-public class Aerea implements FuerzaMilitar {
+public class Aerea extends FuerzaMilitar {
 	private int cantidadDragones;
 	
 	public Aerea(){}

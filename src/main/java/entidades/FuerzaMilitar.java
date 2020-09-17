@@ -1,5 +1,5 @@
 package entidades;
 
-public interface FuerzaMilitar {
-	public void atacarA(Lugar unLugar);
+public abstract class FuerzaMilitar {
+	public abstract void atacarA(Lugar unLugar);
 }

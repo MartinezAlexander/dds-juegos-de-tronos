@@ -1,6 +1,6 @@
 package entidades;
 
-public class Naval implements FuerzaMilitar {
+public class Naval extends FuerzaMilitar {
 	private int cantidadBarcos;
 	
 	public Naval(){}
