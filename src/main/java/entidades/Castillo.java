@@ -11,7 +11,10 @@ public class Castillo extends Lugar {
 	
 	public Castillo(){}
 	
-	public Castillo(int cantidadTorres, int cantidadMurallas){
+	public Castillo(String nombre, int anioFundacion, int poblacion, int cantidadTorres, int cantidadMurallas){
+		this.nombre = nombre;
+		this.anioFundacion = anioFundacion;
+		this.poblacion = poblacion;
 		this.cantidadTorres = cantidadTorres;
 		this.cantidadMurallas = cantidadMurallas;
 	}

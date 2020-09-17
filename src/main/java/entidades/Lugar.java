@@ -9,9 +9,9 @@ import javax.persistence.Table;
 @Table(name="Lugares")
 @Inheritance(strategy=InheritanceType.JOINED)
 public class Lugar extends EntidadPersistente{
-	private String nombre;
-	private int anioFundacion;
-	private int poblacion;
+	protected String nombre;
+	protected int anioFundacion;
+	protected int poblacion;
 	
 	public Lugar(){}
 	

@@ -12,7 +12,10 @@ public class Ciudad extends Lugar {
 	
 	public Ciudad(){}
 	
-	public Ciudad(int cantidadDeComercios, int cantidadDeSantuarios, double tasaDeMortalidad){
+	public Ciudad(String nombre, int anioFundacion, int poblacion,int cantidadDeComercios, int cantidadDeSantuarios, double tasaDeMortalidad){
+		this.nombre = nombre;
+		this.anioFundacion = anioFundacion;
+		this.poblacion = poblacion;
 		this.cantidadDeComercios = cantidadDeComercios;
 		this.cantidadDeSantuarios = cantidadDeSantuarios;
 		this.tasaDeMortalidad = tasaDeMortalidad;
