@@ -3,9 +3,19 @@ package entidades;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Region {
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Region extends EntidadPersistente{
+	
 	private String nombre;
+	
+	@ManyToMany
 	private List<Lugar> lugares;
+	
+	@ManyToOne
 	private Casa casaPrincipal;
 	
 	public Region(){}
@@ -33,8 +43,9 @@ public class Region {
 	}
 	
 	public int poblacionTotal(){
-		//TODO: return this.lugares.stream().map({unLugar => unLugar.poblacio()}).sum();
-		return 0;
+		//return this.lugares.stream().map(Lugar::getPoblacion).reduce(0,Integer::sum);
+		// return this.lugares.stream().map(Lugar::getPoblacion).reduce(BigDecimal.ZERO, BigDecimal::add);
+		return this.lugares.stream().mapToInt(Lugar::getPoblacion).sum();
 	}
 
 	public String getNombre(){

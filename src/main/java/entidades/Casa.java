@@ -3,14 +3,27 @@ package entidades;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Casa {
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Casa extends EntidadPersistente{
 	private String nombre;
 	private int patrimonio;
 	private int anioFundacion;
-	private Casa vasallaDe;
-	private Lugar origen;
-	private List<FuerzaMilitar> fuerzasMilitares;
 	private String nombreLugarOrigen;
+	
+	@ManyToOne
+	private Casa vasallaDe;
+	
+	@ManyToOne
+	private Lugar origen;
+	
+	@OneToMany
+	@JoinColumn(name="casa_id")
+	private List<FuerzaMilitar> fuerzasMilitares;
 	
 	public Casa(){}
 	

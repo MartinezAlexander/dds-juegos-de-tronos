@@ -11,6 +11,12 @@
 		<class>entidades.Lugar</class>
 		<class>entidades.Ciudad</class>
 		<class>entidades.Castillo</class>
+		<class>entidades.FuerzaMilitar</class>
+		<class>entidades.Terrestre</class>
+		<class>entidades.Aerea</class>
+		<class>entidades.Naval</class>
+		<class>entidades.Region</class>
+		<class>entidades.Casa</class>
 		
         <properties> 
 	    <property name="hibernate.archive.autodetection" value="class"/>        

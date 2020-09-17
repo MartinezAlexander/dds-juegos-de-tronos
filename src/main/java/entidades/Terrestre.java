@@ -1,6 +1,12 @@
 package entidades;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
 public class Terrestre extends FuerzaMilitar{
+	
+	@Column(name="cantidad_unidades")
 	private int cantidadSoldados;
 	
 	public Terrestre(){}
